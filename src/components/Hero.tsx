@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Plane, FileText } from "lucide-react";
-import heroImage from "@/assets/hero-travel-bg.jpg";
+import heroImage from "@/assets/hero-travel-clear.jpg";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-hero-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary/60"></div>
       </div>
 
       {/* Content */}
