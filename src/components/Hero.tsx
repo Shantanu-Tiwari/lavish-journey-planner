@@ -37,15 +37,16 @@ const Hero = () => {
               <Plane className="mr-2" />
               Plan Your Journey
             </Button>
-            <Button 
-              variant="ghost-white" 
-              size="xl" 
-              className="hover-lift"
-              onClick={() => document.getElementById('visa')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <FileText className="mr-2" />
-              Visa Assistance
-            </Button>
+              <a href="/visa-countries">
+                <Button 
+                  variant="hero" 
+                  size="xl" 
+                  className="hover-lift"
+                >
+                  <FileText className="mr-2" />
+                  Visa Assistance
+                </Button>
+              </a>
           </div>
         </div>
       </div>

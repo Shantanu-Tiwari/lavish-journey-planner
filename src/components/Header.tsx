@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
+import logoImage from "@/assets/lavish-logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,24 +42,26 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-primary">
-                The Lavish Journeys
-              </h1>
+              <img 
+                src={logoImage} 
+                alt="The Lavish Journeys Logo" 
+                className="h-12 w-auto"
+              />
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
                 Home
               </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
               </a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
                 Services
               </a>
               <div className="relative group">
-                <a href="#visa" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
+                <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
                   Visa for Countries
                   <span className="text-xs">▼</span>
                 </a>
@@ -91,16 +94,16 @@ const Header = () => {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t">
               <nav className="flex flex-col space-y-4">
-                <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+                <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
                   Home
                 </a>
-                <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+                <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
                   About Us
                 </a>
-                <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
+                <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
                   Services
                 </a>
-                <a href="#visa" className="text-foreground hover:text-primary transition-colors font-medium">
+                <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium">
                   Visa for Countries
                 </a>
                 <a href="#blog" className="text-foreground hover:text-primary transition-colors font-medium">

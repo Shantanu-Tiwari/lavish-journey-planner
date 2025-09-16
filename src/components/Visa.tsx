@@ -51,10 +51,12 @@ const Visa = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="hover-lift">
-                  <Globe2 className="mr-2" />
-                  Explore Visa Options
-                </Button>
+                <a href="/visa-countries">
+                  <Button variant="hero" size="lg" className="hover-lift">
+                    <Globe2 className="mr-2" />
+                    Explore Visa Options
+                  </Button>
+                </a>
                 <Button variant="ghost-white" size="lg" className="hover-lift">
                   <Download className="mr-2" />
                   Download Checklist
