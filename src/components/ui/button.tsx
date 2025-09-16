@@ -9,17 +9,24 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary-hover",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary-hover",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Luxury travel variants
+        hero: "bg-luxury-gold text-luxury-gold-foreground hover:bg-secondary shadow-gold hover:shadow-luxury transition-all duration-300 font-semibold",
+        travel: "bg-travel-blue text-travel-blue-foreground hover:bg-accent shadow-travel hover:shadow-luxury transition-all duration-300 font-semibold",
+        premium: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-luxury hover:shadow-gold transition-all duration-300 font-semibold border-2 border-luxury-gold/20",
+        "ghost-white": "text-white border-white/20 hover:bg-white/10 hover:text-white transition-all duration-300",
+        "outline-gold": "border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-gold-foreground transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        sm: "h-9 rounded-md px-3", 
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-base font-semibold",
         icon: "h-10 w-10",
       },
     },
