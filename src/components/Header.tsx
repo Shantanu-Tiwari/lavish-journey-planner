@@ -61,14 +61,11 @@ const Header = () => {
                 Services
               </a>
               <div className="relative group">
-                <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
-                  Visa for Countries
-                  <span className="text-xs">▼</span>
-                </a>
-              </div>
-              <a href="#blog" className="text-foreground hover:text-primary transition-colors font-medium">
-                Blog
+              <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
+                Visa for Countries
+                <span className="text-xs">▼</span>
               </a>
+            </div>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact Us
               </a>
@@ -105,9 +102,6 @@ const Header = () => {
                 </a>
                 <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium">
                   Visa for Countries
-                </a>
-                <a href="#blog" className="text-foreground hover:text-primary transition-colors font-medium">
-                  Blog
                 </a>
                 <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
                   Contact Us

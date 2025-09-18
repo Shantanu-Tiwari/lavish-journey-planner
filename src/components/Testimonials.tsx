@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import happyTravelersImage from "@/assets/happy-travelers.jpg";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,6 +66,18 @@ const Testimonials = () => {
               Real experiences from real travelers who trusted us with their journeys. 
               Their satisfaction is our greatest achievement.
             </p>
+          </div>
+
+          {/* Happy Travelers Image */}
+          <div className="mb-12 fade-in">
+            <div className="relative max-w-4xl mx-auto">
+              <img 
+                src={happyTravelersImage} 
+                alt="Happy travelers enjoying their journeys around the world" 
+                className="rounded-2xl shadow-luxury w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+            </div>
           </div>
 
           {/* Testimonial Carousel */}

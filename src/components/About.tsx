@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, Globe, Heart } from "lucide-react";
+import aboutTeamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   return (
@@ -18,8 +19,20 @@ const About = () => {
 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Image Column */}
+            <div className="fade-in order-2 lg:order-1">
+              <div className="relative">
+                <img 
+                  src={aboutTeamImage} 
+                  alt="The Lavish Journeys team working together" 
+                  className="rounded-2xl shadow-luxury w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+
             {/* Content Column */}
-            <div className="fade-in-up">
+            <div className="fade-in-up order-1 lg:order-2">
               <h3 className="text-2xl font-semibold text-primary mb-6">Our Mission</h3>
               <p className="text-lg text-foreground mb-8 leading-relaxed">
                 Our mission is simple: to transform every journey into a memory—crafted with precision, 
@@ -74,9 +87,9 @@ const About = () => {
               </Button>
             </div>
 
-            {/* Stats/Image Column */}
-            <div className="fade-in-up">
-              <div className="grid grid-cols-2 gap-6">
+            {/* Stats Column */}
+            <div className="fade-in-up order-4 lg:order-3 lg:col-span-2">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card className="hover-lift">
                   <CardContent className="p-8 text-center">
                     <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
