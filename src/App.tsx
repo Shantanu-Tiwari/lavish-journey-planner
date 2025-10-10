@@ -8,6 +8,12 @@ import AboutPage from "./pages/About";
 import ServicesPage from "./pages/Services";
 import VisaCountries from "./pages/VisaCountries";
 import VisaDetail from "./pages/VisaDetail";
+import Europe from "./pages/Europe";
+import Africa from "./pages/Africa";
+import America from "./pages/America";
+import Asia from "./pages/Asia";
+import Australia from "./pages/Australia";
+import MiddleEast from "./pages/MiddleEast";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +30,12 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/visa-countries" element={<VisaCountries />} />
           <Route path="/visa/:country" element={<VisaDetail />} />
+          <Route path="/europe" element={<Europe />} />
+          <Route path="/africa" element={<Africa />} />
+          <Route path="/america" element={<America />} />
+          <Route path="/asia" element={<Asia />} />
+          <Route path="/australia" element={<Australia />} />
+          <Route path="/middle-east" element={<MiddleEast />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
