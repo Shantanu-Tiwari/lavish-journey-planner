@@ -1,17 +1,36 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Plane, FileText } from "lucide-react";
-import heroImage from "@/assets/hero-travel-clear.jpg";
+import heroImage1 from "@/assets/hero-carousel-1.jpg";
+import heroImage2 from "@/assets/hero-carousel-2.jpg";
+import heroImage3 from "@/assets/hero-carousel-3.jpg";
+import heroImage4 from "@/assets/hero-carousel-4.jpg";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [heroImage1, heroImage2, heroImage3, heroImage4];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary/60"></div>
-      </div>
+      {/* Background Image Carousel */}
+      {images.map((image, index) => (
+        <div 
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary/60"></div>
+        </div>
+      ))}
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -19,9 +38,6 @@ const Hero = () => {
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 fade-in">
             The Lavish Journeys
           </h1>
-          <p className="text-xl lg:text-2xl text-white/90 mb-8 fade-in-up font-light">
-            Your Gateway to Seamless Travel
-          </p>
           <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto fade-in-up">
             Transform every journey into a memory—crafted with precision, comfort, and trust. 
             Experience luxury travel planning and hassle-free visa services.

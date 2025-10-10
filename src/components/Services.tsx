@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Hotel, MapPin, Headphones, FileCheck } from "lucide-react";
+import { Globe, Hotel, MapPin, Headphones, FileCheck, Shield } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -32,6 +32,12 @@ const Services = () => {
       title: "Visa & Passport Assistance",
       description: "Streamlined documentation and approval support for hassle-free processing.",
       color: "bg-destructive",
+    },
+    {
+      icon: Shield,
+      title: "Travel Insurance",
+      description: "Comprehensive coverage to protect your journey with peace of mind.",
+      color: "bg-travel-blue",
     },
   ];
 

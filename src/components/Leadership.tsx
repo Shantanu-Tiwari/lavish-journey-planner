@@ -28,36 +28,19 @@ const Leadership = () => {
             </div>
           </div>
 
-          {/* Leadership Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Proprietor */}
-            <Card className="hover-lift group shadow-travel">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-luxury-gradient rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-12 h-12 text-luxury-gold-foreground" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Mrs. Shagun Sirohi</h3>
-                <p className="text-luxury-gold font-semibold mb-4 text-lg">Proprietor</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  With extensive experience in the travel industry, Mrs. Sirohi leads our company 
-                  with a vision of transforming travel dreams into reality. Her commitment to 
-                  excellence ensures every client receives personalized, premium service.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Manager */}
+          {/* Leadership Card */}
+          <div className="max-w-2xl mx-auto">
             <Card className="hover-lift group shadow-travel">
               <CardContent className="p-8 text-center">
                 <div className="w-24 h-24 bg-travel-gradient rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-12 h-12 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-2">Mr. Vikas Balyan</h3>
-                <p className="text-travel-blue font-semibold mb-4 text-lg">Manager</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Mr. Balyan brings operational excellence and strategic oversight to our daily 
-                  operations. His expertise in travel logistics and customer relations ensures 
-                  seamless service delivery and client satisfaction.
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  With over 15 years of experience in the tours and travel industry, Mr. Balyan brings 
+                  operational excellence and strategic expertise to The Lavish Journeys. His deep knowledge 
+                  of travel logistics, customer relations, and destination management ensures seamless 
+                  service delivery and exceptional client satisfaction.
                 </p>
               </CardContent>
             </Card>

@@ -114,22 +114,28 @@ const Footer = () => {
                 <span className="text-sm text-primary-foreground/80">Follow us:</span>
                 <div className="flex gap-4">
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/profile.php?id=61581618810613" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
                   >
                     FB
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/_lavish_journeys_/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
                   >
                     IG
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.threads.com/@_lavish_journeys" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
                   >
-                    IN
+                    TH
                   </a>
                 </div>
               </div>
