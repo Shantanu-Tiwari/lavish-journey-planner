@@ -81,10 +81,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-              <Button variant="travel" size="lg" className="hover-lift">
-                Learn More About Us
-              </Button>
             </div>
 
             {/* Stats Column */}

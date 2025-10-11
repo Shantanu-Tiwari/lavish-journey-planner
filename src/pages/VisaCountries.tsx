@@ -5,54 +5,58 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VisaContactForm from "@/components/VisaContactForm";
 
 const VisaCountries = () => {
   const regions = [
     {
       name: "Europe",
       countries: [
-        "Austria", "Belgium", "Czech Republic", "Denmark", "Finland", 
-        "France", "Germany", "Greece", "Hungary", "Iceland", "Italy", 
-        "Netherlands", "Norway", "Poland", "Portugal", "Spain", "Sweden", "Switzerland", "United Kingdom"
+        "Austria", "Czech Republic", "France", "Germany", "Greece", "Italy", 
+        "Netherlands", "Russia", "Spain", "Switzerland", "Turkey", "United Kingdom"
       ],
-      color: "bg-travel-blue"
+      color: "bg-travel-blue",
+      link: "/europe"
     },
     {
       name: "Asia",
       countries: [
-        "China", "Japan", "Singapore", "South Korea", "Thailand", 
-        "Malaysia", "Vietnam", "Philippines", "Indonesia", "India", "Sri Lanka"
+        "Cambodia", "China (Z Visa)", "China (S1 Visa)", "Japan", "Singapore", "South Korea", "Vietnam"
       ],
-      color: "bg-luxury-gold"
+      color: "bg-luxury-gold",
+      link: "/asia"
     },
     {
       name: "Americas", 
       countries: [
-        "United States", "Canada", "Brazil", "Mexico", "Argentina", 
-        "Chile", "Peru", "Colombia"
+        "Brazil", "Canada"
       ],
-      color: "bg-success"
+      color: "bg-success",
+      link: "/america"
     },
     {
       name: "Middle East",
       countries: [
-        "UAE (Dubai)", "Turkey", "Qatar", "Saudi Arabia", "Israel", "Jordan"
+        "Dubai"
       ],
-      color: "bg-destructive"
+      color: "bg-destructive",
+      link: "/middle-east"
     },
     {
       name: "Africa",
       countries: [
-        "South Africa", "Ghana", "Nigeria", "Kenya", "Morocco", "Egypt"
+        "Ghana", "South Africa"
       ],
-      color: "bg-primary"
+      color: "bg-primary",
+      link: "/africa"
     },
     {
-      name: "Australia & NZ",
+      name: "Australia & Oceania",
       countries: [
-        "Australia", "New Zealand", "Fiji"
+        "Australia", "New Zealand"
       ],
-      color: "bg-travel-blue"
+      color: "bg-travel-blue",
+      link: "/australia"
     }
   ];
 
@@ -127,14 +131,20 @@ const VisaCountries = () => {
                   <CardContent>
                     <div className="grid grid-cols-2 gap-3">
                       {region.countries.map((country) => (
-                        <Link 
+                        <div
                           key={country}
-                          to={`/visa/${country.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}
-                          className="p-3 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium text-center hover-lift"
+                          className="p-3 rounded-lg bg-muted text-sm font-medium text-center"
                         >
                           {country}
-                        </Link>
+                        </div>
                       ))}
+                    </div>
+                    <div className="mt-6">
+                      <Link to={region.link}>
+                        <Button className="w-full" variant="outline">
+                          View {region.name} Visa Details
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
@@ -152,13 +162,12 @@ const VisaCountries = () => {
                   Contact us for personalized assistance and documentation support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="premium" size="lg">
-                    <FileCheck className="mr-2" />
-                    Get Free Consultation
-                  </Button>
-                  <Button variant="outline-gold" size="lg">
-                    Download Visa Checklist
-                  </Button>
+                  <a href="#contact">
+                    <Button variant="premium" size="lg">
+                      <FileCheck className="mr-2" />
+                      Get Free Consultation
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -166,6 +175,8 @@ const VisaCountries = () => {
         </div>
       </section>
 
+      <VisaContactForm />
+      
       <Footer />
       <WhatsAppButton />
     </div>
