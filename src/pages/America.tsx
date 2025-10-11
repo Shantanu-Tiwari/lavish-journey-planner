@@ -1,10 +1,115 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VisaChecklist from "@/components/VisaChecklist";
 import VisaContactForm from "@/components/VisaContactForm";
 import { Globe } from "lucide-react";
 
 const America = () => {
+  const countries = [
+    {
+      name: "Canada",
+      sections: [
+        {
+          title: "General Requirements",
+          items: [
+            "Valid Passport: At least six months' validity beyond departure from Canada",
+            "Previous Passport: If available",
+            "Passport-Sized Photographs: Three latest (45x55mm, white background, face covering 80%)",
+            "Request Letter: To 'The Visa Officer, Canadian High Commission, New Delhi' mentioning purpose, duration, and expenses",
+            "PAN Card Copy",
+            "Income Tax Returns: Last three years' personal income tax returns",
+            "International Credit Card Copy",
+            "Bank Statement: Last six months' original personal bank statement with name, address, sign, and stamp",
+          ],
+        },
+        {
+          title: "Businessmen",
+          items: [
+            "Proof of Company Registration: Memorandum/Partnership Deed",
+            "Company's Last Year Balance Sheet",
+            "Company's Last Three Years Income Tax Returns",
+            "Company Bank Statement: Last six months' with name, address, sign, and stamp",
+          ],
+        },
+        {
+          title: "Salaried Persons",
+          items: [
+            "Last Three Months Salary Slip",
+            "Leave Certificate and NOC from Employer",
+            "Office ID Card",
+          ],
+        },
+        {
+          title: "Children Traveling with Parents",
+          items: [
+            "School or College ID Card",
+            "NOC or Leave Letter from School or College",
+            "Aadhar card",
+          ],
+        },
+        {
+          title: "Requirements for Those Being Invited",
+          items: [
+            "Invitation Letter: Mentioning relation, personal details, and contact details",
+            "Passport and Valid Visa Copy",
+            "Resident Card",
+            "Offer Letter from Employer",
+            "Six Months Bank Statement and Tax Papers",
+          ],
+        },
+      ],
+    },
+    {
+      name: "Brazil",
+      sections: [
+        {
+          title: "General Requirements for Tourist Visits",
+          items: [
+            "Valid passport (6 months from departure date) with previous passport",
+            "Recent passport-sized photographs (2) 35*45 mm",
+            "Request letter (mentioning purpose, duration, and sponsor)",
+            "Confirmed travel booking (hotel and flight)",
+            "Three-year Income Tax Return",
+            "Personal bank statement (last 6 months) with signature and stamp",
+            "Aadhar Card and PAN Card (clearly visible)",
+          ],
+        },
+        {
+          title: "Businessmen",
+          items: [
+            "Three-year Income Tax Return",
+            "Company bank statement (last 6 months) with name and address",
+            "Proof of Company Registration/Memorandum/Partnership Deed",
+          ],
+        },
+        {
+          title: "Salaried Persons",
+          items: [
+            "6-month salary slip",
+            "Leave Certificate and NOC from Employer",
+            "Office ID card",
+          ],
+        },
+        {
+          title: "Students",
+          items: [
+            "Consent from parents/spouse and their bank statement",
+            "Student ID card copy",
+            "School NOC",
+          ],
+        },
+        {
+          title: "Business Visits",
+          items: [
+            "Invitation letter from the business partner in Brazil",
+            "Planned activities and business relationship documentation",
+          ],
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -15,20 +120,22 @@ const America = () => {
             <div className="inline-block p-3 bg-primary/10 rounded-full mb-4">
               <Globe className="h-12 w-12 text-primary" />
             </div>
-            <h1 className="text-5xl font-bold mb-4">America Visa Services</h1>
+            <h1 className="text-5xl font-bold mb-4">Americas Visa Services</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive visa requirements and checklists for American countries
+              Comprehensive visa requirements and checklists for North and South American countries
             </p>
           </div>
         </div>
       </section>
 
       <section className="py-12 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-muted-foreground mb-8">
-              Visa checklists for American countries will be added soon. Contact us for assistance with your America travel visa requirements.
-            </p>
+        <div className="container mx-auto px-4">
+          <div className="space-y-12">
+            {countries.map((country, index) => (
+              <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
+                <VisaChecklist country={country.name} sections={country.sections} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

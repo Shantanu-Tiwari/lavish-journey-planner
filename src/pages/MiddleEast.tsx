@@ -1,10 +1,36 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VisaChecklist from "@/components/VisaChecklist";
 import VisaContactForm from "@/components/VisaContactForm";
 import { Globe } from "lucide-react";
 
 const MiddleEast = () => {
+  const countries = [
+    {
+      name: "Dubai (UAE)",
+      sections: [
+        {
+          title: "For Tourist Visit",
+          items: [
+            "06 Months Valid Passport from the date of departure (Need to carry old passports if any)",
+            "Two Latest passport size Photograph, white background size –2X2 mm, face should be Cover on Photo 70%",
+            "Pan Card Copy",
+            "Confirmed travel booking (Hotel & Flight)",
+          ],
+        },
+        {
+          title: "For Business Visit",
+          items: [
+            "Invitation Letter from the Inviting company",
+            "Letter of Guarantee, from the inviting company",
+            "Certified copy of the incorporation register or an overview of company",
+          ],
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -24,11 +50,13 @@ const MiddleEast = () => {
       </section>
 
       <section className="py-12 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-muted-foreground mb-8">
-              Visa checklists for Middle East countries will be added soon. Contact us for assistance with your Middle East travel visa requirements.
-            </p>
+        <div className="container mx-auto px-4">
+          <div className="space-y-12">
+            {countries.map((country, index) => (
+              <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
+                <VisaChecklist country={country.name} sections={country.sections} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

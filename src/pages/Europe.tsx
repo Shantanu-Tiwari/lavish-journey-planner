@@ -448,6 +448,108 @@ const Europe = () => {
         },
       ],
     },
+    {
+      name: "Greece",
+      sections: [
+        {
+          title: "General Requirements for Tourist Visits",
+          items: [
+            "Valid passport (6 months from departure date)",
+            "Recent passport-sized photographs (2) not older than 6 months",
+            "Request letter (mentioning purpose, duration, and sponsor)",
+            "Confirmed travel booking (hotel and flight) and insurance",
+            "Last three-year Income Tax Return",
+            "Personal bank statement (last 6 months) with signature and stamped from bank",
+            "Aadhar Card and PAN Card (clearly visible)",
+          ],
+        },
+        {
+          title: "Businessmen",
+          items: [
+            "Three-year Income Tax Return",
+            "Company bank statement (last 6 months) with name and address",
+            "Proof of Company Registration/Memorandum/Partnership Deed",
+          ],
+        },
+        {
+          title: "Salaried Persons",
+          items: [
+            "6-month salary slip",
+            "Leave Certificate and NOC from Employer",
+          ],
+        },
+        {
+          title: "Students",
+          items: [
+            "Consent from parents/spouse and their bank statement stamped by bank",
+            "Student ID card copy",
+            "School NOC",
+          ],
+        },
+        {
+          title: "Business Visits",
+          items: [
+            "Invitation letter from the business partner in Greece",
+            "Planned activities and business relationship documentation",
+            "Invitor's residency permit and identity card photocopies",
+          ],
+        },
+        {
+          title: "Sponsors",
+          items: [
+            "Proof of financial means if trip is sponsored by third party",
+            "Sponsor's Bank Statement (last three months) with signature and stamp",
+          ],
+        },
+      ],
+    },
+    {
+      name: "Turkey",
+      sections: [
+        {
+          title: "For Tourist Visit",
+          items: [
+            "06 Months Valid Passport from the date of departure (Need to carry old passports if any)",
+            "Two Latest passport size Photograph, white background size – 2 X 2 mm, face should be Cover on Photo 70%",
+            "Request letter on the letter head or normal paper (mention purpose of visit, duration of stay, who will be pay your visit)",
+            "Confirmed travel booking (Hotel & Flight)",
+            "Three Year Income Tax Return",
+            "Personal bank Statement last 6 month balance 1 Lakh INR for per person with sign and stamp by the bank authority",
+            "Aadhar Card & Pan Card (clearly visible)",
+          ],
+        },
+        {
+          title: "If Businessman",
+          items: [
+            "Three year Income Tax Return",
+            "Last 6 month bank statement of company – with Name & Address to be mention",
+            "Proof of Company Registration / Memorandum / Partner Ship Deed (Original notary attestation mandatory)",
+          ],
+        },
+        {
+          title: "If Salaried Person",
+          items: [
+            "Last three month salary slip",
+            "Leave Certificate & NOC From The Employer",
+            "Form 16",
+          ],
+        },
+        {
+          title: "If Student",
+          items: [
+            "Student / Dependant, consent from the parents/ spouse and their bank statement",
+            "Student Id card copy",
+            "School NOC",
+          ],
+        },
+        {
+          title: "If Retired",
+          items: [
+            "Retirement Documents & Income Proof along with last three month bank statement with 1 Lakh INR",
+          ],
+        },
+      ],
+    },
   ];
 
   return (
