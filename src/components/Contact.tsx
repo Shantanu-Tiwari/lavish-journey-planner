@@ -109,11 +109,21 @@ const Contact = () => {
 
               {/* Quick Contact Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="hover-lift">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="hover-lift"
+                  onClick={() => window.open('https://wa.me/919958530029', '_blank')}
+                >
                   <MessageCircle className="mr-2" />
                   WhatsApp Us
                 </Button>
-                <Button variant="ghost-white" size="lg" className="hover-lift">
+                <Button 
+                  variant="ghost-white" 
+                  size="lg" 
+                  className="hover-lift"
+                  onClick={() => window.location.href = 'tel:+919958530029'}
+                >
                   <Phone className="mr-2" />
                   Call Now
                 </Button>

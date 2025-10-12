@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2, Download } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ChecklistSection {
   title: string;
@@ -12,11 +14,28 @@ interface VisaChecklistProps {
 }
 
 const VisaChecklist = ({ country, sections }: VisaChecklistProps) => {
+  const { toast } = useToast();
+
+  const handleDownload = () => {
+    toast({
+      title: "Download Request",
+      description: "Please contact us at +91 99585 30029 or info@lavishjourneys.in to receive the complete checklist.",
+    });
+  };
+
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle className="text-2xl">{country} Visa Requirements</CardTitle>
-        <CardDescription>Please ensure all documents are prepared before applying</CardDescription>
+        <div className="flex justify-between items-start gap-4">
+          <div>
+            <CardTitle className="text-2xl">{country} Visa Requirements</CardTitle>
+            <CardDescription>Please ensure all documents are prepared before applying</CardDescription>
+          </div>
+          <Button onClick={handleDownload} variant="outline" size="sm">
+            <Download className="mr-2 h-4 w-4" />
+            Download Checklist
+          </Button>
+        </div>
       </CardHeader>
       <CardContent className="space-y-6">
         {sections.map((section, index) => (

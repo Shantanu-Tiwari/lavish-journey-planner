@@ -3,18 +3,21 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import AboutPage from "./pages/About";
-import ServicesPage from "./pages/Services";
-import VisaCountries from "./pages/VisaCountries";
-import VisaDetail from "./pages/VisaDetail";
-import Europe from "./pages/Europe";
-import Africa from "./pages/Africa";
-import America from "./pages/America";
-import Asia from "./pages/Asia";
-import Australia from "./pages/Australia";
-import MiddleEast from "./pages/MiddleEast";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+
+// Lazy load pages for better performance
+const Index = lazy(() => import("./pages/Index"));
+const AboutPage = lazy(() => import("./pages/About"));
+const ServicesPage = lazy(() => import("./pages/Services"));
+const VisaCountries = lazy(() => import("./pages/VisaCountries"));
+const VisaDetail = lazy(() => import("./pages/VisaDetail"));
+const Europe = lazy(() => import("./pages/Europe"));
+const Africa = lazy(() => import("./pages/Africa"));
+const America = lazy(() => import("./pages/America"));
+const Asia = lazy(() => import("./pages/Asia"));
+const Australia = lazy(() => import("./pages/Australia"));
+const MiddleEast = lazy(() => import("./pages/MiddleEast"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -24,21 +27,23 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/visa-countries" element={<VisaCountries />} />
-          <Route path="/visa/:country" element={<VisaDetail />} />
-          <Route path="/europe" element={<Europe />} />
-          <Route path="/africa" element={<Africa />} />
-          <Route path="/america" element={<America />} />
-          <Route path="/asia" element={<Asia />} />
-          <Route path="/australia" element={<Australia />} />
-          <Route path="/middle-east" element={<MiddleEast />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/visa-countries" element={<VisaCountries />} />
+            <Route path="/visa/:country" element={<VisaDetail />} />
+            <Route path="/europe" element={<Europe />} />
+            <Route path="/africa" element={<Africa />} />
+            <Route path="/america" element={<America />} />
+            <Route path="/asia" element={<Asia />} />
+            <Route path="/australia" element={<Australia />} />
+            <Route path="/middle-east" element={<MiddleEast />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

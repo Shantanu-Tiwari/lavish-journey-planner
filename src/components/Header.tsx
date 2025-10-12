@@ -1,10 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
 import logoImage from "@/assets/lavish-logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToContact = () => {
+    if (window.location.pathname === '/') {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/', { state: { scrollToContact: true } });
+    }
+  };
 
   return (
     <>
@@ -66,14 +76,14 @@ const Header = () => {
                 <span className="text-xs">▼</span>
               </a>
             </div>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact Us
-              </a>
+              </button>
             </nav>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button variant="hero" size="lg">
+              <Button variant="hero" size="lg" onClick={scrollToContact}>
                 Get in Touch
               </Button>
             </div>
@@ -103,10 +113,10 @@ const Header = () => {
                 <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium">
                   Visa for Countries
                 </a>
-                <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+                <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium">
                   Contact Us
-                </a>
-                <Button variant="hero" size="lg" className="w-fit">
+                </button>
+                <Button variant="hero" size="lg" className="w-fit" onClick={scrollToContact}>
                   Get in Touch
                 </Button>
               </nav>

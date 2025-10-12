@@ -4,12 +4,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Visa for Countries", href: "#visa" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact Us", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Visa for Countries", href: "/visa-countries" },
+    { name: "Contact Us", href: "/" }
   ];
 
   const popularDestinations = [
@@ -82,7 +81,7 @@ const Footer = () => {
                 {popularDestinations.map((destination) => (
                   <li key={destination}>
                     <a 
-                      href="#visa" 
+                      href="/visa-countries" 
                       className="text-primary-foreground/80 hover:text-luxury-gold transition-colors text-sm"
                     >
                       {destination}
@@ -144,9 +143,6 @@ const Footer = () => {
               <div className="text-center md:text-right">
                 <p className="text-sm text-primary-foreground/80">
                   Copyright © {currentYear} The Lavish Journeys. All rights reserved.
-                </p>
-                <p className="text-xs text-primary-foreground/60 mt-1">
-                  Crafted with ❤️ for exceptional travel experiences
                 </p>
               </div>
             </div>
