@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Users } from "lucide-react";
-import leadershipOfficeImage from "@/assets/leadership-office.jpg";
+import { Users } from "lucide-react";
 
 const Leadership = () => {
   return (
@@ -14,18 +13,6 @@ const Leadership = () => {
               Our experienced leadership team brings decades of expertise in travel, hospitality, 
               and customer service to ensure your journey exceeds expectations.
             </p>
-          </div>
-
-          {/* Office Image */}
-          <div className="mb-12 fade-in">
-            <div className="relative max-w-2xl mx-auto">
-              <img 
-                src={leadershipOfficeImage} 
-                alt="Lavish Journeys leadership team office" 
-                className="rounded-2xl shadow-luxury w-full h-[300px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl"></div>
-            </div>
           </div>
 
           {/* Leadership Card */}
