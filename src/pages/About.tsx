@@ -21,7 +21,7 @@ const AboutPage = () => {
             </Link>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6">
-              About The Lavish Journeys
+              About Lavish Journeys
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Your premier travel solutions provider, dedicated to transforming every journey 
@@ -40,7 +40,7 @@ const AboutPage = () => {
                 <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Story</h2>
                 <div className="space-y-6 text-lg text-foreground leading-relaxed">
                   <p>
-                    Founded in Ghaziabad, Uttar Pradesh, The Lavish Journeys emerged from a simple yet 
+                    Founded in Ghaziabad, Uttar Pradesh, Lavish Journeys emerged from a simple yet 
                     powerful vision: to make luxury travel accessible and stress-free for everyone. 
                     We recognized that travel should be about creating memories, not managing complications.
                   </p>
@@ -204,27 +204,11 @@ const AboutPage = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Leadership Team</h2>
               <p className="text-lg text-muted-foreground">
-                Meet the experienced professionals leading The Lavish Journeys
+                Meet the experienced professionals leading Lavish Journeys
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="hover-lift shadow-travel">
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 bg-luxury-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Award className="w-12 h-12 text-luxury-gold-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Mrs. Shagun Sirohi</h3>
-                  <p className="text-luxury-gold font-semibold mb-4 text-lg">Proprietor</p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    With extensive experience in the travel industry, Mrs. Sirohi leads our company 
-                    with a vision of transforming travel dreams into reality. Her commitment to 
-                    excellence ensures every client receives personalized, premium service that 
-                    exceeds expectations.
-                  </p>
-                </CardContent>
-              </Card>
-
+            <div className="max-w-2xl mx-auto">
               <Card className="hover-lift shadow-travel">
                 <CardContent className="p-8 text-center">
                   <div className="w-24 h-24 bg-travel-gradient rounded-full flex items-center justify-center mx-auto mb-6">
@@ -233,9 +217,10 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-primary mb-2">Mr. Vikas Balyan</h3>
                   <p className="text-travel-blue font-semibold mb-4 text-lg">Manager</p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Mr. Balyan brings operational excellence and strategic oversight to our daily 
-                    operations. His expertise in travel logistics, customer relations, and process 
-                    optimization ensures seamless service delivery and exceptional client satisfaction.
+                    With 9 years of experience in the tours and travel industry, Mr. Balyan brings 
+                    operational excellence and strategic oversight to our daily operations. His expertise 
+                    in travel logistics, customer relations, and process optimization ensures seamless 
+                    service delivery and exceptional client satisfaction.
                   </p>
                 </CardContent>
               </Card>
@@ -250,7 +235,7 @@ const AboutPage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-                Why Choose The Lavish Journeys?
+                Why Choose Lavish Journeys?
               </h2>
             </div>
 

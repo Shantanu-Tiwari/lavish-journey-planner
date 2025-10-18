@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Company Info */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">The Lavish Journeys</h3>
+              <h3 className="text-2xl font-bold mb-4">Lavish Journeys</h3>
               <p className="text-primary-foreground/80 mb-6 leading-relaxed">
                 Your premier travel solutions provider, specializing in luxury travel experiences 
                 and seamless visa services worldwide.
@@ -142,7 +142,7 @@ const Footer = () => {
               {/* Copyright */}
               <div className="text-center md:text-right">
                 <p className="text-sm text-primary-foreground/80">
-                  Copyright © {currentYear} The Lavish Journeys. All rights reserved.
+                  Copyright © {currentYear} Lavish Journeys. All rights reserved.
                 </p>
               </div>
             </div>

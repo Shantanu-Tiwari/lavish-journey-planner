@@ -54,7 +54,11 @@ const MiddleEast = () => {
           <div className="space-y-12">
             {countries.map((country, index) => (
               <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
-                <VisaChecklist country={country.name} sections={country.sections} />
+                <VisaChecklist 
+                  country={country.name} 
+                  sections={country.sections}
+                  pdfFileName="dubai-checklist.pdf"
+                />
               </div>
             ))}
           </div>

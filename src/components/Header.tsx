@@ -54,7 +54,7 @@ const Header = () => {
             <div className="flex-shrink-0">
               <img 
                 src={logoImage} 
-                alt="The Lavish Journeys Logo" 
+                alt="Lavish Journeys Logo" 
                 className="h-12 w-auto"
               />
             </div>

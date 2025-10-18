@@ -12,7 +12,7 @@ const About = () => {
           <div className="text-center mb-16 fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Who We Are</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              The Lavish Journeys is a premier travel solutions provider headquartered in Ghaziabad, U.P. 
+              Lavish Journeys is a premier travel solutions provider headquartered in Ghaziabad, U.P. 
               We specialize in curating personalized, luxurious travel experiences for leisure and corporate clients.
             </p>
           </div>
@@ -24,7 +24,7 @@ const About = () => {
               <div className="relative">
                 <img 
                   src={aboutTeamImage} 
-                  alt="The Lavish Journeys team working together" 
+                  alt="Lavish Journeys team working together" 
                   className="rounded-2xl shadow-luxury w-full h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>

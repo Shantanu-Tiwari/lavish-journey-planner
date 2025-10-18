@@ -11,16 +11,28 @@ interface ChecklistSection {
 interface VisaChecklistProps {
   country: string;
   sections: ChecklistSection[];
+  pdfFileName?: string;
 }
 
-const VisaChecklist = ({ country, sections }: VisaChecklistProps) => {
+const VisaChecklist = ({ country, sections, pdfFileName }: VisaChecklistProps) => {
   const { toast } = useToast();
 
   const handleDownload = () => {
-    toast({
-      title: "Download Request",
-      description: "Please contact us at +91 99585 30029 or info@lavishjourneys.in to receive the complete checklist.",
-    });
+    if (pdfFileName) {
+      const link = document.createElement('a');
+      link.href = `/checklists/${pdfFileName}`;
+      link.download = pdfFileName;
+      link.click();
+      toast({
+        title: "Download Started",
+        description: `${country} visa checklist is being downloaded.`,
+      });
+    } else {
+      toast({
+        title: "Download Request",
+        description: "Please contact us at +91 99585 30029 or info@lavishjourneys.in to receive the complete checklist.",
+      });
+    }
   };
 
   return (

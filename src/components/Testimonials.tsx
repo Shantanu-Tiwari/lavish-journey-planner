@@ -12,7 +12,7 @@ const Testimonials = () => {
       name: "Priya Sharma",
       location: "Delhi",
       rating: 5,
-      text: "The Lavish Journeys made our European honeymoon absolutely perfect! From visa assistance to hotel bookings, everything was seamless. Mrs. Sirohi's personal attention to detail made all the difference.",
+      text: "Lavish Journeys made our European honeymoon absolutely perfect! From visa assistance to hotel bookings, everything was seamless. The personal attention to detail made all the difference.",
       trip: "Europe Honeymoon Package"
     },
     {

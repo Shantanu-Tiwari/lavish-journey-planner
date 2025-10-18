@@ -21,7 +21,7 @@ const Leadership = () => {
             <div className="relative max-w-2xl mx-auto">
               <img 
                 src={leadershipOfficeImage} 
-                alt="The Lavish Journeys leadership team office" 
+                alt="Lavish Journeys leadership team office" 
                 className="rounded-2xl shadow-luxury w-full h-[300px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl"></div>
@@ -37,8 +37,8 @@ const Leadership = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-2">Mr. Vikas Balyan</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  With over 15 years of experience in the tours and travel industry, Mr. Balyan brings 
-                  operational excellence and strategic expertise to The Lavish Journeys. His deep knowledge 
+                  With 9 years of experience in the tours and travel industry, Mr. Balyan brings 
+                  operational excellence and strategic expertise to Lavish Journeys. His deep knowledge 
                   of travel logistics, customer relations, and destination management ensures seamless 
                   service delivery and exceptional client satisfaction.
                 </p>

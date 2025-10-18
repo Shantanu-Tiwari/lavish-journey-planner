@@ -316,11 +316,26 @@ const Asia = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
-            {countries.map((country, index) => (
-              <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
-                <VisaChecklist country={country.name} sections={country.sections} />
-              </div>
-            ))}
+            {countries.map((country, index) => {
+              const pdfMap: Record<string, string> = {
+                "Vietnam": "vietnam-checklist.pdf",
+                "South Korea": "south-korea-checklist.pdf",
+                "Singapore": "singapore-checklist.pdf",
+                "Japan": "japan-checklist.pdf",
+                "Cambodia": "cambodia-checklist.pdf",
+                "China (Z Visa - Work Visa)": "china-z-visa-checklist.pdf",
+                "China (S1 Visa - Long Stay)": "china-s1-visa-checklist.pdf",
+              };
+              return (
+                <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
+                  <VisaChecklist 
+                    country={country.name} 
+                    sections={country.sections}
+                    pdfFileName={pdfMap[country.name]}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

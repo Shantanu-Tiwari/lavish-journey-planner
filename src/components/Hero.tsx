@@ -36,7 +36,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 fade-in">
-            The Lavish Journeys
+            Lavish Journeys
           </h1>
           <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto fade-in-up">
             Transform every journey into a memory—crafted with precision, comfort, and trust. 
