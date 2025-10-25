@@ -88,14 +88,14 @@ const About = () => {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 <Card className="hover-lift">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
+                    <h3 className="text-3xl font-bold text-primary mb-2">100+</h3>
                     <p className="text-muted-foreground">Happy Travelers</p>
                   </CardContent>
                 </Card>
                 
                 <Card className="hover-lift">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-3xl font-bold text-luxury-gold mb-2">30+</h3>
+                    <h3 className="text-3xl font-bold text-luxury-gold mb-2">5+</h3>
                     <p className="text-muted-foreground">Countries Served</p>
                   </CardContent>
                 </Card>

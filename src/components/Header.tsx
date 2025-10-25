@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
-import logoImage from "@/assets/lavish-logo.jpg";
+import logoImage from "@/assets/lavish-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
