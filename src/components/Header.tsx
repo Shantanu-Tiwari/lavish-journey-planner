@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
-import logoImage from "@/assets/lavish-logo.jpg";
+import { Menu, X, Phone, Mail, MessageCircle, Facebook, Instagram } from "lucide-react";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,10 +36,16 @@ const Header = () => {
               <a href="https://wa.me/919958530029" className="hover:text-luxury-gold transition-colors">
                 <MessageCircle size={16} />
               </a>
-              <div className="flex gap-2">
-                <a href="#" className="hover:text-luxury-gold transition-colors text-xs">FB</a>
-                <a href="#" className="hover:text-luxury-gold transition-colors text-xs">IG</a>
-                <a href="#" className="hover:text-luxury-gold transition-colors text-xs">LinkedIn</a>
+              <div className="flex gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61581618810613" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
+                  <Facebook size={16} />
+                </a>
+                <a href="https://www.instagram.com/_lavish_journeys_/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
+                  <Instagram size={16} />
+                </a>
+                <a href="https://www.threads.com/@_lavish_journeys" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
+                  <img src="/threads-white-icon.svg" alt="Threads" className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -53,7 +59,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img 
-                src={logoImage} 
+                src="/logo.png" 
                 alt="Lavish Journeys Logo" 
                 className="h-12 w-auto"
               />
@@ -61,7 +67,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>
                 Home
               </a>
               <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -101,7 +107,7 @@ const Header = () => {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t">
               <nav className="flex flex-col space-y-4">
-                <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+                <a href="/" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>
                   Home
                 </a>
                 <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">

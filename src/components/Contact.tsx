@@ -18,12 +18,27 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    try {
+      const subject = "Travel Inquiry from Website";
+      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AMessage: ${formData.message}`;
+      const mailtoLink = `mailto:info@lavishjourneys.in?subject=${encodeURIComponent(subject)}&body=${body}`;
+      
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Opening Email Client",
+        description: "Your default email client will open with the inquiry details.",
+      });
+      
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

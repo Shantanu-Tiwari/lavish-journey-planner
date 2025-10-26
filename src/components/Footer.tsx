@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, Facebook, Instagram } from "lucide-react";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -116,25 +117,25 @@ const Footer = () => {
                     href="https://www.facebook.com/profile.php?id=61581618810613" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                   >
-                    FB
+                    <Facebook size={20} />
                   </a>
                   <a 
                     href="https://www.instagram.com/_lavish_journeys_/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                   >
-                    IG
+                    <Instagram size={20} />
                   </a>
                   <a 
                     href="https://www.threads.com/@_lavish_journeys" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors text-sm font-semibold"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
                   >
-                    TH
+                    <img src="/threads-white-icon.svg" alt="Threads" className="w-5 h-5" />
                   </a>
                 </div>
               </div>

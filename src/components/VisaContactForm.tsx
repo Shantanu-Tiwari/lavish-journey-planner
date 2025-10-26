@@ -16,21 +16,36 @@ const VisaContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      country: "",
-      message: "",
-    });
+    try {
+      // Create mailto link as fallback
+      const subject = `Visa Inquiry for ${formData.country}`;
+      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACountry: ${formData.country}%0D%0AMessage: ${formData.message}`;
+      const mailtoLink = `mailto:info@lavishjourneys.in?subject=${encodeURIComponent(subject)}&body=${body}`;
+      
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Opening Email Client",
+        description: "Your default email client will open with the inquiry details.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        country: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (
@@ -65,7 +80,8 @@ const VisaContactForm = () => {
                   <div>
                     <p className="font-medium">Office Address</p>
                     <p className="text-sm text-muted-foreground">
-                      Baldev Nagar, Ambala City, Haryana 134003
+                      102, Sector - 9, 1st Floor, SRBC Tower,<br />
+                      Vasundhara, Ghaziabad, U.P.
                     </p>
                   </div>
                 </div>
@@ -73,8 +89,7 @@ const VisaContactForm = () => {
                   <Phone className="h-5 w-5 text-primary mt-1" />
                   <div>
                     <p className="font-medium">Phone Numbers</p>
-                    <p className="text-sm text-muted-foreground">+91-9050009393</p>
-                    <p className="text-sm text-muted-foreground">+91-9050009292</p>
+                    <p className="text-sm text-muted-foreground">+91 99585 30029</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -82,7 +97,7 @@ const VisaContactForm = () => {
                   <div>
                     <p className="font-medium">Email</p>
                     <p className="text-sm text-muted-foreground">
-                      info@lavishjourneys.com
+                      info@lavishjourneys.in
                     </p>
                   </div>
                 </div>

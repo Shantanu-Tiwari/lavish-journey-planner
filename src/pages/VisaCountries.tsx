@@ -78,7 +78,7 @@ const VisaCountries = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Choose your destination to get hassle-free visa assistance. 
-              We provide expert guidance for over 30+ countries worldwide.
+              We provide expert guidance for over 5+ countries worldwide.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -101,7 +101,7 @@ const VisaCountries = () => {
               <Card className="text-center hover-lift">
                 <CardContent className="p-6">
                   <MapPin className="w-12 h-12 text-luxury-gold mx-auto mb-4" />
-                  <h3 className="font-semibold text-primary mb-2">30+ Countries</h3>
+                  <h3 className="font-semibold text-primary mb-2">5+ Countries</h3>
                   <p className="text-sm text-muted-foreground">Global coverage</p>
                 </CardContent>
               </Card>
@@ -129,16 +129,7 @@ const VisaCountries = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-2 gap-3">
-                      {region.countries.map((country) => (
-                        <div
-                          key={country}
-                          className="p-3 rounded-lg bg-muted text-sm font-medium text-center"
-                        >
-                          {country}
-                        </div>
-                      ))}
-                    </div>
+
                     <div className="mt-6">
                       <Link to={region.link}>
                         <Button className="w-full" variant="outline">
@@ -162,12 +153,14 @@ const VisaCountries = () => {
                   Contact us for personalized assistance and documentation support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="#contact">
-                    <Button variant="premium" size="lg">
-                      <FileCheck className="mr-2" />
-                      Get Free Consultation
-                    </Button>
-                  </a>
+                  <Button 
+                    variant="premium" 
+                    size="lg"
+                    onClick={() => document.querySelector('section:has([class*="VisaContactForm"], form)')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <FileCheck className="mr-2" />
+                    Get Free Consultation
+                  </Button>
                 </div>
               </div>
             </div>
