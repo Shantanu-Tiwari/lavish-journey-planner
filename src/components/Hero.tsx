@@ -48,7 +48,7 @@ const Hero = () => {
               variant="hero" 
               size="xl" 
               className="hover-lift"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('https://wa.me/919958530029', '_blank')}
             >
               <Plane className="mr-2" />
               Plan Your Journey
