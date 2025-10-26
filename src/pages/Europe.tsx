@@ -575,7 +575,17 @@ const Europe = () => {
           <div className="space-y-12">
             {countries.map((country, index) => {
               const pdfMap: Record<string, string> = {
-                "Greece": "greece-checklist.pdf",
+                "Italy": "ITALY-CHECKLIST.pdf.pdf",
+                "France": "FRANCE-CHECKLIST-PDF.pdf.pdf",
+                "Germany": "GERMANY-CHECKLIST-PDF.pdf.pdf",
+                "Spain": "SPAIN-CHECKLIST-PDF.pdf.pdf",
+                "Switzerland": "SWITZERLAND-CHECKLSIT.pdf",
+                "United Kingdom": "UNITED-KINGDOM-1.pdf.pdf",
+                "Austria": "AUSTRIA-CHECKLIST.pdf.pdf",
+                "Netherlands": "NETHERLAND-CHECKLIST-PDF.pdf.pdf",
+                "Czech Republic": "CZCH-REPUBLIC-CHECKLIST-1.pdf.pdf",
+                "Russia": "Russia-Visa-Checklist.pdf.pdf",
+                "Greece": "GREECE-CHECKLIST.pdf.pdf",
                 "Turkey": "turkiye-checklist.pdf",
               };
               return (

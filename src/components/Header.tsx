@@ -58,11 +58,13 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img 
-                src="/logo.png" 
-                alt="Lavish Journeys Logo" 
-                className="h-12 w-auto"
-              />
+              <a href="/" onClick={() => window.scrollTo(0, 0)}>
+                <img 
+                  src="/logo.png" 
+                  alt="Lavish Journeys Logo" 
+                  className="h-12 w-auto cursor-pointer"
+                />
+              </a>
             </div>
 
             {/* Desktop Navigation */}
