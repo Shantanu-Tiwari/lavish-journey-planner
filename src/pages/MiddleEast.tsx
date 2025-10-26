@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VisaChecklist from "@/components/VisaChecklist";
 import VisaContactForm from "@/components/VisaContactForm";
 import { Globe } from "lucide-react";
 
@@ -40,9 +41,9 @@ const MiddleEast = () => {
             <div className="inline-block p-3 bg-primary/10 rounded-full mb-4">
               <Globe className="h-12 w-12 text-primary" />
             </div>
-            <h1 className="text-5xl font-bold mb-4">Middle East Visa Requirements</h1>
+            <h1 className="text-5xl font-bold mb-4">Middle East Visa Services</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Complete checklist of documents required for Middle East visa applications
+              Comprehensive visa requirements and checklists for Middle East countries
             </p>
           </div>
         </div>
@@ -50,22 +51,14 @@ const MiddleEast = () => {
 
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-8">
+          <div className="space-y-12">
             {countries.map((country, index) => (
-              <div key={index}>
-                {country.sections.map((section, sectionIndex) => (
-                  <div key={sectionIndex} className="mb-6">
-                    <h2 className="text-2xl font-semibold text-primary mb-4">{section.title}</h2>
-                    <ul className="space-y-2 ml-4">
-                      {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+              <div key={index} id={country.name.toLowerCase().replace(/\s+/g, '-')}>
+                <VisaChecklist 
+                  country={country.name} 
+                  sections={country.sections}
+                  pdfFileName="dubai-checklist.pdf"
+                />
               </div>
             ))}
           </div>

@@ -148,7 +148,7 @@ const Testimonials = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 fade-in-up">
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-primary mb-2">100+</h3>
+              <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
               <p className="text-muted-foreground">Happy Customers</p>
             </div>
             <div className="text-center">
