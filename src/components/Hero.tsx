@@ -53,16 +53,15 @@ const Hero = () => {
               <Plane className="mr-2" />
               Plan Your Journey
             </Button>
-              <a href="/visa-countries">
-                <Button 
-                  variant="hero" 
-                  size="xl" 
-                  className="hover-lift"
-                >
-                  <FileText className="mr-2" />
-                  Visa Assistance
-                </Button>
-              </a>
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="hover-lift"
+                onClick={() => window.location.href = '/visa-countries'}
+              >
+                <FileText className="mr-2" />
+                Visa Assistance
+              </Button>
           </div>
         </div>
       </div>
