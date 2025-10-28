@@ -197,33 +197,99 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team Leadership */}
+      {/* Who We Are */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Leadership Team</h2>
-              <p className="text-lg text-muted-foreground">
-                Meet the experienced professionals leading Lavish Journeys
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Who We Are</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Lavish Journeys is a premier travel solutions provider headquartered in Ghaziabad, U.P. 
+                We specialize in curating personalized, luxurious travel experiences for leisure and corporate clients.
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              <Card className="hover-lift shadow-travel">
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 bg-travel-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-12 h-12 text-white" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <h3 className="text-2xl font-semibold text-primary mb-6">Our Mission</h3>
+                <p className="text-lg text-foreground mb-8 leading-relaxed">
+                  Our mission is simple: to transform every journey into a memory—crafted with precision, 
+                  comfort, and trust. We believe that travel should be seamless, luxurious, and tailored 
+                  to your unique needs and dreams.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-travel-blue rounded-full flex items-center justify-center">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary">Premium Service Excellence</h4>
+                      <p className="text-muted-foreground">Delivering world-class travel experiences</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Mr. Vikas Balyan</h3>
-                  <p className="text-travel-blue font-semibold mb-4 text-lg">Manager</p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    With 9 years of experience in the tours and travel industry, Mr. Balyan brings 
-                    operational excellence and strategic oversight to our daily operations. His expertise 
-                    in travel logistics, customer relations, and process optimization ensures seamless 
-                    service delivery and exceptional client satisfaction.
-                  </p>
-                </CardContent>
-              </Card>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-luxury-gold-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary">Personalized Attention</h4>
+                      <p className="text-muted-foreground">Tailored solutions for every traveler</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-success rounded-full flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary">Global Network</h4>
+                      <p className="text-muted-foreground">Trusted partnerships worldwide</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-destructive rounded-full flex items-center justify-center">
+                      <Heart className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary">Passionate Commitment</h4>
+                      <p className="text-muted-foreground">Your satisfaction is our priority</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="hover-lift">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-3xl font-bold text-luxury-gold mb-2">100+</h3>
+                    <p className="text-muted-foreground">Happy Travelers</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="hover-lift">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-3xl font-bold text-travel-blue mb-2">5+</h3>
+                    <p className="text-muted-foreground">Countries Served</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="hover-lift">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-3xl font-bold text-success mb-2">99%</h3>
+                    <p className="text-muted-foreground">Success Rate</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="hover-lift">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-3xl font-bold text-destructive mb-2">24/7</h3>
+                    <p className="text-muted-foreground">Support Available</p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

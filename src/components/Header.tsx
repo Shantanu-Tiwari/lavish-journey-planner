@@ -38,13 +38,13 @@ const Header = () => {
               </a>
               <div className="flex gap-3">
                 <a href="https://www.facebook.com/profile.php?id=61581618810613" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
-                  <Facebook size={16} />
+                  <Facebook size={20} />
                 </a>
                 <a href="https://www.instagram.com/_lavish_journeys_/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
-                  <Instagram size={16} />
+                  <Instagram size={20} />
                 </a>
                 <a href="https://www.threads.com/@_lavish_journeys" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
-                  <img src="/threads-white-icon.svg" alt="Threads" className="w-4 h-4" />
+                  <img src="/threads-white-icon.svg" alt="Threads" className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -72,9 +72,6 @@ const Header = () => {
               <a href="/" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>
                 Home
               </a>
-              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
-                About Us
-              </a>
               <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
                 Services
               </a>
@@ -84,6 +81,9 @@ const Header = () => {
                 <span className="text-xs">▼</span>
               </a>
             </div>
+              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+                About Us
+              </a>
               <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact Us
               </button>
@@ -112,14 +112,14 @@ const Header = () => {
                 <a href="/" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>
                   Home
                 </a>
-                <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
-                  About Us
-                </a>
                 <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
                   Services
                 </a>
                 <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium">
                   Visa for Countries
+                </a>
+                <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+                  About Us
                 </a>
                 <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium">
                   Contact Us
