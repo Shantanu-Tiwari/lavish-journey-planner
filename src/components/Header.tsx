@@ -37,10 +37,10 @@ const Header = () => {
                 <MessageCircle size={16} />
               </a>
               <div className="flex gap-3">
-                <a href="https://www.facebook.com/profile.php?id=61581618810613" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61581618810613" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="https://www.instagram.com/_lavish_journeys_/" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
+                <a href="https://www.instagram.com/_lavish_journeys_/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 transition-colors">
                   <Instagram size={20} />
                 </a>
                 <a href="https://www.threads.com/@_lavish_journeys" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
@@ -54,44 +54,44 @@ const Header = () => {
 
       {/* Main Header */}
       <header className="bg-background border-b shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto px-8">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <a href="/" onClick={() => window.scrollTo(0, 0)}>
                 <img 
                   src="/logo.png" 
                   alt="Lavish Journeys Logo" 
-                  className="h-12 w-auto cursor-pointer"
+                  className="h-16 w-auto cursor-pointer"
                 />
               </a>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>
+            <nav className="hidden lg:flex items-center space-x-10">
+              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium text-lg" onClick={() => window.scrollTo(0, 0)}>
                 Home
               </a>
-              <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium text-lg">
                 Services
               </a>
               <div className="relative group">
-              <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <a href="/visa-countries" className="text-foreground hover:text-primary transition-colors font-medium text-lg flex items-center gap-1">
                 Visa for Countries
                 <span className="text-xs">▼</span>
               </a>
             </div>
-              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium text-lg">
                 About Us
               </a>
-              <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium">
+              <button onClick={scrollToContact} className="text-foreground hover:text-primary transition-colors font-medium text-lg">
                 Contact Us
               </button>
             </nav>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button variant="hero" size="lg" onClick={scrollToContact}>
+              <Button variant="hero" size="xl" onClick={scrollToContact}>
                 Get in Touch
               </Button>
             </div>

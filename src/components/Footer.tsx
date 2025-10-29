@@ -117,17 +117,17 @@ const Footer = () => {
                     href="https://www.facebook.com/profile.php?id=61581618810613" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                    className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                   >
-                    <Facebook size={20} />
+                    <Facebook size={20} className="text-white" />
                   </a>
                   <a 
                     href="https://www.instagram.com/_lavish_journeys_/" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold transition-colors"
+                    className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-colors"
                   >
-                    <Instagram size={20} />
+                    <Instagram size={20} className="text-white" />
                   </a>
                   <a 
                     href="https://www.threads.com/@_lavish_journeys" 
