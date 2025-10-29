@@ -20,31 +20,31 @@ const Header = () => {
     <>
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 hidden md:block">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
               <a href="mailto:info@lavishjourneys.in" className="flex items-center gap-2 hover:text-luxury-gold transition-colors">
-                <Mail size={16} />
+                <Mail size={18} />
                 info@lavishjourneys.in
               </a>
               <a href="tel:+919958530029" className="flex items-center gap-2 hover:text-luxury-gold transition-colors">
-                <Phone size={16} />
+                <Phone size={18} />
                 +91 99585 30029
               </a>
             </div>
             <div className="flex items-center gap-4">
               <a href="https://wa.me/919958530029" className="hover:text-luxury-gold transition-colors">
-                <MessageCircle size={16} />
+                <MessageCircle size={18} />
               </a>
               <div className="flex gap-3">
                 <a href="https://www.facebook.com/profile.php?id=61581618810613" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors">
-                  <Facebook size={20} />
+                  <Facebook size={22} />
                 </a>
                 <a href="https://www.instagram.com/_lavish_journeys_/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 transition-colors">
-                  <Instagram size={20} />
+                  <Instagram size={22} />
                 </a>
                 <a href="https://www.threads.com/@_lavish_journeys" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-gold transition-colors">
-                  <img src="/threads-white-icon.svg" alt="Threads" className="w-5 h-5" />
+                  <img src="/threads-white-icon.svg" alt="Threads" className="w-6 h-6" />
                 </a>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Header = () => {
                 <img 
                   src="/logo.png" 
                   alt="Lavish Journeys Logo" 
-                  className="h-16 w-auto cursor-pointer"
+                  className="h-24 w-auto cursor-pointer"
                 />
               </a>
             </div>
